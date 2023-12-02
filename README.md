@@ -9,8 +9,6 @@ SO THAT I can efficiently structure and strategize for the success of my busines
 ```
 ## Description
 
-What was your motivation?
-
 - The motivation behind this project was to create a comprehensive command-line application that allows business owners or managers to efficiently manage their company's departments, roles, and employees. This tool aims to provide a user-friendly interface for organizing and planning business operations.
 Why did you build this project?
 
@@ -22,27 +20,24 @@ What did you learn?
 
 - During the development of this project, I gained practical experience in creating a command-line interface application and integrating it with a database. I learned about structuring and organizing database queries, handling user input, and implementing features that align with real-world business needs. Additionally, the project enhanced my understanding of how businesses can leverage technology for operational efficiency and organization management.
 
-## Acceptance Criteria
+## Installation
 
-```md
-GIVEN a command-line application that accepts user input
-WHEN I start the application
-THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
-WHEN I choose to view all departments
-THEN I am presented with a formatted table showing department names and department ids
-WHEN I choose to view all roles
-THEN I am presented with the job title, role id, the department that role belongs to, and the salary for that role
-WHEN I choose to view all employees
-THEN I am presented with a formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
-WHEN I choose to add a department
-THEN I am prompted to enter the name of the department and that department is added to the database
-WHEN I choose to add a role
-THEN I am prompted to enter the name, salary, and department for the role and that role is added to the database
-WHEN I choose to add an employee
-THEN I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database
-WHEN I choose to update an employee role
-THEN I am prompted to select an employee to update and their new role and this information is updated in the database 
-```
+Prerequisites:
+
+1. Node.js (version X.X.X or higher)
+npm (included with Node.js installation)
+
+2. Clone the Repository:
+
+3. Navigate to the Project Directory: cd your-project
+
+4. Install Dependencies: npm install
+
+5. Set Up Database:
+Create a new MySQL database.
+Update the db/connection.js file with your database connection details.
+
+6. Run node index.js to run the database in your terminal
 
 ## Mock-Up
 
