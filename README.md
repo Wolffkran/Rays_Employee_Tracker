@@ -38,9 +38,8 @@ Update the db/connection.js file with your database connection details.
 
 6. Run ```mdnode index.js``` to run the database in your terminal
 
-    ```md
-    ![alt text](assets\images\example.png)
-    ```
+![alt text](assets/images/example.png)
+
 
 ## Review
 
