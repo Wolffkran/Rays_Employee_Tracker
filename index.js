@@ -6,7 +6,7 @@ init();
 
 // Display logo text, load main prompts
 function init() {
-  const logoText = logo({ name: "Employee Manager" }).render();
+  const logoText = logo({ name: "Rays Employee Tracker" }).render();
 
   console.log(logoText);
 
