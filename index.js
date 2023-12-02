@@ -197,7 +197,7 @@ function viewEmployeesByManager() {
           let employees = rows;
           console.log("\n");
           if (employees.length === 0) {
-            console.log("The selected employee has no direct reports");
+            console.log("The selected employee possesses no direct reports");
           } else {
             console.table(employees);
           }
@@ -210,25 +210,25 @@ function viewEmployeesByManager() {
 function removeEmployee() {
   db.findAllEmployees()
     .then(([rows]) => {
-      let employees = rows;
-      const employeeChoices = employees.map(({ id, first_name, last_name }) => ({
+      const employeeChoices = rows.map(({ id, first_name, last_name }) => ({
         name: `${first_name} ${last_name}`,
         value: id
       }));
 
-      prompt([
+      return prompt([
         {
           type: "list",
           name: "employeeId",
           message: "Which employee do you want to remove?",
           choices: employeeChoices
         }
-      ])
-        .then(res => db.removeEmployee(res.employeeId))
-        .then(() => console.log("Removed employee from the database"))
-        .then(() => loadMainPrompts())
+      ]);
     })
+    .then(({ employeeId }) => db.removeEmployee(employeeId))
+    .then(() => console.log("Destroyed employee from the database"))
+    .then(loadMainPrompts);
 }
+
 
 // Update an employee's role
 function updateEmployeeRole() {
@@ -267,7 +267,7 @@ function updateEmployeeRole() {
                 }
               ])
                 .then(res => db.updateEmployeeRole(employeeId, res.roleId))
-                .then(() => console.log("Updated employee's role"))
+                .then(() => console.log("Changed employee's role"))
                 .then(() => loadMainPrompts())
             });
         });
@@ -312,7 +312,7 @@ function updateEmployeeManager() {
                 }
               ])
                 .then(res => db.updateEmployeeManager(employeeId, res.managerId))
-                .then(() => console.log("Updated employee's manager"))
+                .then(() => console.log("Changed employee's manager"))
                 .then(() => loadMainPrompts())
             })
         })
@@ -521,6 +521,6 @@ function addEmployee() {
 
 // Exit the application
 function quit() {
-  console.log("Goodbye!");
+  console.log("Farewell!");
   process.exit();
 }
