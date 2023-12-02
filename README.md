@@ -2,11 +2,10 @@
 
 ## User Story
 
-```md
 AS A company proprietor,
 I DESIRE the capability to oversee and administer the various departments, roles, and employees within my organization,
 SO THAT I can efficiently structure and strategize for the success of my business.
-```
+
 ## Description
 
 - The motivation behind this project was to create a comprehensive command-line application that allows business owners or managers to efficiently manage their company's departments, roles, and employees. This tool aims to provide a user-friendly interface for organizing and planning business operations.
@@ -27,17 +26,17 @@ Prerequisites:
 1. Node.js (version X.X.X or higher)
 npm (included with Node.js installation)
 
-2. Clone the Repository:
+2. Clone the Repository: ```mdhttps://github.com/Wolffkran/Rays_Employee_Tracker.git``
 
 3. Navigate to the Project Directory: cd your-project
 
-4. Install Dependencies: npm install
+4. Install Dependencies: ```md npm install```
 
 5. Set Up Database:
 Create a new MySQL database.
 Update the db/connection.js file with your database connection details.
 
-6. Run node index.js to run the database in your terminal
+6. Run ```mdnode index.js``` to run the database in your terminal
 
 ## Mock-Up
 
